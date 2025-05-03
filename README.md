@@ -18,14 +18,11 @@ A free, feature-rich Roblox text bypass script designed for simplicity, reliabil
 
 ## 📦 Setup Instructions
 
-1. **Set your Roblox language to `Қазақ Тілі*`.**
+1. **Execute the script.**
+   - Load the script into your Roblox instance.
+
+2. **Set your Roblox language to `Қазақ Тілі*`.**
    - This is required for the script to activate correctly.
-
-2. **Load the script into your game.**
-   - Add the script to `StarterGui`, and ensure the UI elements are parented correctly.
-
-3. **Enable RichText.**
-   - Ensure `TextLabel` and `TextBox` components have `RichText` set to `true` in the properties window.
 
 ---
 
