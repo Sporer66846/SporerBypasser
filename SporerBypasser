@@ -1660,7 +1660,7 @@ local function toggleInfo()
 		G2L["75"]:SetAttribute("Open", false)
 
 		G2L["7a"].Visible = false
-		TWEENSERVICE:Create(G2L["77"], TweenInfo.new(0.3), {CornerRadius = UDim.new(1,0)})
+		TWEENSERVICE:Create(G2L["77"], TweenInfo.new(0.3), {CornerRadius = UDim.new(1,0)}):Play()
 		TWEENSERVICE:Create(G2L["76"], TweenInfo.new(0.3), {Position = G2L["76"]:GetAttribute("BetweenPos"), Size = G2L["76"]:GetAttribute("BetweenSize")}):Play()
 		task.wait(0.3)
 		TWEENSERVICE:Create(G2L["76"], TweenInfo.new(0.2), {Position = G2L["76"]:GetAttribute("ClosedPos"), Size = G2L["76"]:GetAttribute("ClosedSize")}):Play()
@@ -1672,7 +1672,7 @@ local function toggleInfo()
 		G2L["7a"].Visible = false
 		TWEENSERVICE:Create(G2L["76"], TweenInfo.new(0.3), {Position = G2L["76"]:GetAttribute("BetweenPos"), Size = G2L["76"]:GetAttribute("BetweenSize")}):Play()
 		task.wait(0.3)
-		TWEENSERVICE:Create(G2L["77"], TweenInfo.new(0.2), {CornerRadius = UDim.new(0.1,0)})
+		TWEENSERVICE:Create(G2L["77"], TweenInfo.new(0.2), {CornerRadius = UDim.new(0.1,0)}):Play()
 		TWEENSERVICE:Create(G2L["76"], TweenInfo.new(0.2), {Position = G2L["76"]:GetAttribute("ExtendedPos"), Size = G2L["76"]:GetAttribute("ExtendedSize")}):Play()
 
 		task.wait(0.2)
@@ -1687,7 +1687,7 @@ local function toggleCredits()
 		G2L["8f"]:SetAttribute("Open", false)
 
 		G2L["94"].Visible = false
-		TWEENSERVICE:Create(G2L["91"], TweenInfo.new(0.3), {CornerRadius = UDim.new(1,0)})
+		TWEENSERVICE:Create(G2L["91"], TweenInfo.new(0.3), {CornerRadius = UDim.new(1,0)}):Play()
 		TWEENSERVICE:Create(G2L["90"], TweenInfo.new(0.3), {Position = G2L["90"]:GetAttribute("BetweenPos"), Size = G2L["90"]:GetAttribute("BetweenSize")}):Play()
 		task.wait(0.3)
 		TWEENSERVICE:Create(G2L["90"], TweenInfo.new(0.2), {Position = G2L["90"]:GetAttribute("ClosedPos"), Size = G2L["90"]:GetAttribute("ClosedSize")}):Play()
@@ -1698,7 +1698,7 @@ local function toggleCredits()
 
 		TWEENSERVICE:Create(G2L["90"], TweenInfo.new(0.3), {Position = G2L["90"]:GetAttribute("BetweenPos"), Size = G2L["90"]:GetAttribute("BetweenSize")}):Play()
 		task.wait(0.3)
-		TWEENSERVICE:Create(G2L["91"], TweenInfo.new(0.2), {CornerRadius = UDim.new(0.1,0)})
+		TWEENSERVICE:Create(G2L["91"], TweenInfo.new(0.2), {CornerRadius = UDim.new(0.1,0)}):Play()
 		TWEENSERVICE:Create(G2L["90"], TweenInfo.new(0.2), {Position = G2L["90"]:GetAttribute("ExtendedPos"), Size = G2L["90"]:GetAttribute("ExtendedSize")}):Play()
 
 		task.wait(0.2)
@@ -1713,7 +1713,7 @@ local function toggleHistory()
 		G2L["55"]:SetAttribute("Open", false)
 		
 		G2L["5a"].Visible = false
-		TWEENSERVICE:Create(G2L["57"], TweenInfo.new(0.3), {CornerRadius = UDim.new(1,0)})
+		TWEENSERVICE:Create(G2L["57"], TweenInfo.new(0.3), {CornerRadius = UDim.new(1,0)}):Play()
 		TWEENSERVICE:Create(G2L["56"], TweenInfo.new(0.3), {Position = G2L["56"]:GetAttribute("BetweenPos"), Size = G2L["56"]:GetAttribute("BetweenSize")}):Play()
 		task.wait(0.3)
 		TWEENSERVICE:Create(G2L["56"], TweenInfo.new(0.2), {Position = G2L["56"]:GetAttribute("ClosedPos"), Size = G2L["56"]:GetAttribute("ClosedSize")}):Play()
@@ -1724,7 +1724,7 @@ local function toggleHistory()
 		
 		TWEENSERVICE:Create(G2L["56"], TweenInfo.new(0.3), {Position = G2L["56"]:GetAttribute("BetweenPos"), Size = G2L["56"]:GetAttribute("BetweenSize")}):Play()
 		task.wait(0.3)
-		TWEENSERVICE:Create(G2L["57"], TweenInfo.new(0.2), {CornerRadius = UDim.new(0.1,0)})
+		TWEENSERVICE:Create(G2L["57"], TweenInfo.new(0.2), {CornerRadius = UDim.new(0.1,0)}):Play()
 		TWEENSERVICE:Create(G2L["56"], TweenInfo.new(0.2), {Position = G2L["56"]:GetAttribute("ExtendedPos"), Size = G2L["56"]:GetAttribute("ExtendedSize")}):Play()
 		
 		task.wait(0.2)
@@ -1760,10 +1760,15 @@ local function toggleMenu()
 		task.wait(0.3)
 		TWEENSERVICE:Create(G2L["27"].Close, TweenInfo.new(0.2), {Position = G2L["27"].Close:GetAttribute("ClosedPos"), Size = G2L["27"].Close:GetAttribute("ClosedSize")}):Play()
 		TWEENSERVICE:Create(G2L["27"], TweenInfo.new(0.2), {Position = G2L["27"]:GetAttribute("ClosedPos"), Size = G2L["27"]:GetAttribute("ClosedSize")}):Play()
-
+		
+		task.wait(0.1)
+		
+		G2L["27"].Visible = false
 	else
 
 		G2L["26"]:SetAttribute("Open", true)
+		
+		G2L["27"].Visible = true
 
 		TWEENSERVICE:Create(G2L["27"].Close, TweenInfo.new(0.3), {Position = G2L["27"].Close:GetAttribute("BetweenPos"), Size = G2L["27"].Close:GetAttribute("BetweenSize")}):Play()
 		TWEENSERVICE:Create(G2L["27"], TweenInfo.new(0.3), {Position = G2L["27"]:GetAttribute("BetweenPos"), Size = G2L["27"]:GetAttribute("BetweenSize")}):Play()
