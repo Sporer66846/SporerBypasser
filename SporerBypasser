@@ -1669,15 +1669,14 @@ local function toggleInfo()
 
 		G2L["75"]:SetAttribute("Open", true)
 
-		G2L["7a"].Visible = false
 		TWEENSERVICE:Create(G2L["76"], TweenInfo.new(0.3), {Position = G2L["76"]:GetAttribute("BetweenPos"), Size = G2L["76"]:GetAttribute("BetweenSize")}):Play()
 		task.wait(0.3)
 		TWEENSERVICE:Create(G2L["77"], TweenInfo.new(0.2), {CornerRadius = UDim.new(0.1,0)}):Play()
 		TWEENSERVICE:Create(G2L["76"], TweenInfo.new(0.2), {Position = G2L["76"]:GetAttribute("ExtendedPos"), Size = G2L["76"]:GetAttribute("ExtendedSize")}):Play()
 
 		task.wait(0.2)
-
-		G2L["94"].Visible = true
+		
+		G2L["7a"].Visible = true
 	end	
 end
 
