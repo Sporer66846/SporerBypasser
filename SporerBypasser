@@ -1796,9 +1796,36 @@ local function toggleMenu()
 	end	
 end
 
-G2L["51"].MouseButton1Down:Connect(toggleInfo)
-G2L["49"].MouseButton1Down:Connect(toggleCredits)
-G2L["39"].MouseButton1Down:Connect(toggleHistory)
+G2L["51"].MouseButton1Down:Connect(function()
+	if G2L["8f"]:GetAttribute("Open") == true then
+		toggleCredits()
+	end
+
+	if G2L["55"]:GetAttribute("Open") == true then
+		toggleHistory()
+	end
+	toggleInfo()
+end)
+G2L["49"].MouseButton1Down:Connect(function()
+	if G2L["75"]:GetAttribute("Open") == true then
+		toggleInfo()
+	end
+
+	if G2L["55"]:GetAttribute("Open") == true then
+		toggleHistory()
+	end
+	toggleCredits()
+end)
+G2L["39"].MouseButton1Down:Connect(function()
+	if G2L["75"]:GetAttribute("Open") == true then
+		toggleInfo()
+	end
+
+	if G2L["8f"]:GetAttribute("Open") == true then
+		toggleCredits()
+	end
+	toggleHistory()
+end)
 
 G2L["22"].MouseButton1Down:Connect(toggleMenu)
 
