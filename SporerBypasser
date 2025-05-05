@@ -1664,10 +1664,14 @@ local function toggleInfo()
 		TWEENSERVICE:Create(G2L["76"], TweenInfo.new(0.3), {Position = G2L["76"]:GetAttribute("BetweenPos"), Size = G2L["76"]:GetAttribute("BetweenSize")}):Play()
 		task.wait(0.3)
 		TWEENSERVICE:Create(G2L["76"], TweenInfo.new(0.2), {Position = G2L["76"]:GetAttribute("ClosedPos"), Size = G2L["76"]:GetAttribute("ClosedSize")}):Play()
-
+		
+		task.wait(0.2)
+		
+		G2L["76"].Visible = true
 	else
 
 		G2L["75"]:SetAttribute("Open", true)
+		G2L["76"].Visible = true
 
 		TWEENSERVICE:Create(G2L["76"], TweenInfo.new(0.3), {Position = G2L["76"]:GetAttribute("BetweenPos"), Size = G2L["76"]:GetAttribute("BetweenSize")}):Play()
 		task.wait(0.3)
@@ -1690,10 +1694,14 @@ local function toggleCredits()
 		TWEENSERVICE:Create(G2L["90"], TweenInfo.new(0.3), {Position = G2L["90"]:GetAttribute("BetweenPos"), Size = G2L["90"]:GetAttribute("BetweenSize")}):Play()
 		task.wait(0.3)
 		TWEENSERVICE:Create(G2L["90"], TweenInfo.new(0.2), {Position = G2L["90"]:GetAttribute("ClosedPos"), Size = G2L["90"]:GetAttribute("ClosedSize")}):Play()
-
+		
+		task.wait(0.2)
+		
+		G2L["90"].Visible = false
 	else
 
 		G2L["8f"]:SetAttribute("Open", true)
+		G2L["90"].Visible = true
 
 		TWEENSERVICE:Create(G2L["90"], TweenInfo.new(0.3), {Position = G2L["90"]:GetAttribute("BetweenPos"), Size = G2L["90"]:GetAttribute("BetweenSize")}):Play()
 		task.wait(0.3)
@@ -1716,10 +1724,14 @@ local function toggleHistory()
 		TWEENSERVICE:Create(G2L["56"], TweenInfo.new(0.3), {Position = G2L["56"]:GetAttribute("BetweenPos"), Size = G2L["56"]:GetAttribute("BetweenSize")}):Play()
 		task.wait(0.3)
 		TWEENSERVICE:Create(G2L["56"], TweenInfo.new(0.2), {Position = G2L["56"]:GetAttribute("ClosedPos"), Size = G2L["56"]:GetAttribute("ClosedSize")}):Play()
-
+		
+		task.wait(0.2)
+		
+		G2L["56"].Visible = false
 	else
 		
 		G2L["55"]:SetAttribute("Open", true)
+		G2L["56"].Visible = true
 		
 		TWEENSERVICE:Create(G2L["56"], TweenInfo.new(0.3), {Position = G2L["56"]:GetAttribute("BetweenPos"), Size = G2L["56"]:GetAttribute("BetweenSize")}):Play()
 		task.wait(0.3)
