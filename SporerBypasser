@@ -9,7 +9,8 @@
 
 -- Instances: 168 | Scripts: 0 | Modules: 0 | Tags: 0
 
-TWEENSERVICE = game:GetService("TweenService")
+local TWEENSERVICE = game:GetService("TweenService")
+local USERINPUTSERVICE = game:GetService("UserInputService")
 
 local G2L = {};
 
@@ -1154,7 +1155,6 @@ G2L["7a"] = Instance.new("ScrollingFrame", G2L["76"]);
 G2L["7a"]["Active"] = true;
 G2L["7a"]["BorderSizePixel"] = 0;
 G2L["7a"]["CanvasSize"] = UDim2.new(0, 0, 3, 0);
-G2L["7a"]["CanvasPosition"] = Vector2.new(0, 555.31769);
 G2L["7a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["7a"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
 G2L["7a"]["Size"] = UDim2.new(0.95, 0, 0.95, 0);
@@ -1654,6 +1654,8 @@ G2L["a8"]["AspectRatio"] = 1.33173;
 local CLICKCOOLDOWN = 0.5
 local COOLDOWNACTIVE = false
 
+local CLOSEKEYBIND = Enum.KeyCode.RightControl
+
 local function toggleInfo()
 	if G2L["75"]:GetAttribute("Open") == true then
 
@@ -1797,6 +1799,15 @@ local function toggleMenu()
 	end	
 end
 
+local function bindKey()
+	G2L["8c"].Text = "PRESS KEY TO BIND..."
+	
+	local Input, gameProceed = USERINPUTSERVICE.InputBegan:Wait()
+	
+	G2L["8c"].Text = "CLOSE KEY: [".. string.upper(Input.KeyCode.Name) .."]"
+	CLOSEKEYBIND = Input.KeyCode
+end
+
 G2L["51"].MouseButton1Down:Connect(function()
 	if G2L["8f"]:GetAttribute("Open") == true then
 		toggleCredits()
@@ -1828,6 +1839,7 @@ G2L["39"].MouseButton1Down:Connect(function()
 	toggleHistory()
 end)
 
+G2L["85"].MouseButton1Down:Connect(bindKey)
 G2L["22"].MouseButton1Down:Connect(toggleMenu)
 
 return G2L["1"], require;
