@@ -1741,6 +1741,7 @@ local function toggleHistory()
 		task.wait(0.2)
 		
 		G2L["5a"].Visible = true
+		G2L["5a"].CanvasPosition = Vector2.new(0, G2L["5a"].AbsoluteCanvasSize.Y)
 	end	
 end
 
