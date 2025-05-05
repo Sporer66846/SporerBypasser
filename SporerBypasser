@@ -1667,7 +1667,7 @@ local function toggleInfo()
 		
 		task.wait(0.2)
 		
-		G2L["76"].Visible = true
+		G2L["76"].Visible = false
 	else
 
 		G2L["75"]:SetAttribute("Open", true)
